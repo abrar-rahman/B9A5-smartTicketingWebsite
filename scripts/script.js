@@ -7,7 +7,17 @@ for (let index = 0; index < cards.length; index++) {
   // console.log(card);
 
   card.addEventListener('click', function () {
-    console.log("clicked");
+    // console.log("clicked");
+
+
+
+
+
+
+
+
+
+    
   })
   
 }
