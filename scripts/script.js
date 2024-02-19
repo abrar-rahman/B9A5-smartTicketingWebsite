@@ -16,7 +16,7 @@ for (let index = 0; index < cards.length; index++) {
     const seatLeftElement = document.getElementById('seatLeft');
     const seatLeftText = seatLeftElement.innerText;
     const seatLeftNumber = parseInt(seatLeftText);
-    console.log(typeof seatLeftNumber);
+    // console.log(typeof seatLeftNumber);
     
     // Decrement left seat number
     const newLeftSeat = seatLeftNumber - 1;
@@ -44,13 +44,34 @@ for (let index = 0; index < cards.length; index++) {
     totalPriceElement.innerText = totalPrice;
 
    
+    // pUpdate
+    const title = document.querySelectorAll('.card').innerText;
+    console.log(title);
     
-    
-
-    
-  
-
 
   })
   
 }
+
+
+const btn = document.getElementById("applyBtn");
+btn.addEventListener("click", function () {
+  
+  const couponElement = document.getElementById("couponInput").value;
+  // console.log(couponElement);
+
+  if (couponElement === "NEW15") {
+    // Discount calculation
+    const discountAmount = totalPrice * 0.15;
+    
+
+
+    const grandTotalCalc = document.getElementById("grandTotal");
+    grandTotalCalc.innerText = totalPrice - discountAmount;
+    
+
+
+  }
+
+
+})
