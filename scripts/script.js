@@ -44,9 +44,16 @@ for (let index = 0; index < cards.length; index++) {
 
    
     // pUpdate
-    const title = document.querySelectorAll('.card').innerText;
-    console.log(title);
+    // const title = document.querySelectorAll('.card').innerText;
+    // console.log(title);
     
+    // Grand total price
+    const grandTotalElement = document.getElementById('grandTotal');
+    const grandTotalText = grandTotalElement.innerText;
+    const grandTotalNumber = parseInt(grandTotalText);
+
+    const grandTotal = grandTotalNumber + 550;
+    grandTotalElement.innerText = grandTotal;
 
   })
   
@@ -61,14 +68,15 @@ btn.addEventListener("click", function () {
 
   if (couponElement === "NEW15") {
     // Discount calculation
+    const discountElement = document.getElementById("discountPrice");
     const discountAmount = totalPrice * 0.15;
+    discountElement.innerText = discountAmount.toFixed(2);
     
     
 
-
-    const grandTotalCalc = document.getElementById("grandTotal");
-    grandTotalCalc.innerText = totalPrice - discountAmount;
     
+
+
 
 
   }
