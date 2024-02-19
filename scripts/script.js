@@ -28,8 +28,7 @@ for (let index = 0; index < cards.length; index++) {
     const newSelectSeatElement = document.getElementById('seatSup');
     const newSelectSeatText = newSelectSeatElement.innerText;
     const newSelectSeatNumber = parseInt(newSelectSeatText);
-
-
+    
     // select seat increment
     const newSelectSeat = newSelectSeatNumber + 1;
     newSelectSeatElement.innerText = newSelectSeat;
@@ -63,6 +62,7 @@ btn.addEventListener("click", function () {
   if (couponElement === "NEW15") {
     // Discount calculation
     const discountAmount = totalPrice * 0.15;
+    
     
 
 
